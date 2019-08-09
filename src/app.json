@@ -1,0 +1,189 @@
+{
+  "pages": [
+    {
+      "path": "pages/index",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "蚂蚁团购"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "登录/注册"
+      }
+    },
+    {
+      "path": "pages/login/loginMain",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "蚂蚁团购登录"
+      }
+    },
+    {
+      "path": "pages/login/addPhone",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "添加其他号码"
+      }
+    },
+    {
+      "path": "pages/shoppingCart/index",
+      "config": {
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "购物车"
+      }
+    },
+    {
+      "path": "pages/classification/index",
+      "config": {
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "分类"
+      }
+    },
+    {
+      "path": "pages/classification/searchGoods",
+      "config": {
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "path": "pages/classification/goodDetail",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "商品详情"
+      }
+    },
+    {
+      "path": "pages/classification/antShop",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "蚂蚁小店"
+      }
+    },
+    {
+      "path": "pages/mine",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#F74F4F",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/order/settlement",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "提交订单"
+      }
+    },
+    {
+      "path": "pages/order/myOrders",
+      "config": {
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 15,
+        "navigationBarTitleText": "我的订单"
+      }
+    },
+    {
+      "path": "pages/order/orderDetail",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/address/myAddress",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "我的地址"
+      }
+    },
+    {
+      "path": "pages/address/addAddress",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "新建地址"
+      }
+    },
+    {
+      "path": "pages/address/editAddress",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "编辑地址"
+      }
+    },
+    {
+      "path": "pages/buyingGroup/index",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "小店拼团"
+      }
+    },
+    {
+      "path": "pages/buyingGroup/groupDetail",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "团购详情"
+      }
+    },
+    {
+      "path": "pages/buyingGroup/joinGroup",
+      "config": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "拼团详情"
+      }
+    },
+    "pages/counter",
+    "pages/test",
+    {
+      "path": "packageA/logs",
+      "subPackage": true,
+      "config": {
+        "navigationBarTitleText": "查看启动日志"
+      }
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "backgroundColor": "#fff",
+    "selectedColor": "#EA2F2F",
+    "borderStyle": "white",
+
+    "list": [{
+      "text": "精选",
+      "pagePath": "pages/index",
+      "iconPath": "static/tabs/home_icon_store_normal.png",
+      "selectedIconPath": "static/tabs/home_icon_store_selected.png"
+    },{
+      "text": "分类",
+      "pagePath": "pages/classification/index",
+      "iconPath": "static/tabs/home_icon_category_normal.png",
+      "selectedIconPath": "static/tabs/home_icon_category_selected.png"
+    }, {
+      "text": "购物车",
+      "pagePath": "pages/shoppingCart/index",
+      "iconPath": "static/tabs/home_icon_cart_normal.png",
+      "selectedIconPath": "static/tabs/home_icon_cart_selected.png"
+    }, {
+      "text": "我的",
+      "pagePath": "pages/mine",
+      "iconPath": "static/tabs/home_icon_mine_normal.png",
+      "selectedIconPath": "static/tabs/home_icon_mine_selected.png"
+    }],
+    "position": "bottom"
+  }
+}

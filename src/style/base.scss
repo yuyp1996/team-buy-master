@@ -1,0 +1,361 @@
+@import "mixin";
+// 定义函数 rpx
+@function rpx ($value) {
+  @return $value * 1rpx
+}
+body, header, footer, nav, view, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea,button, input, select, figure, figcaption, view {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft Yahei",sans-serif;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+button {
+  border: 0 none;
+  background: transparent;
+  border-radius: 0;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis2{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.main-box{
+  position: relative;
+  height: calc(100vh - #{rpx(98)});
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.main-box2{
+  position: relative;
+  height: calc(100vh - #{rpx(98)} - #{rpx(108)});
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.main-box3{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.main-box4{
+  position: relative;
+  height: calc(100vh - #{rpx(86)});
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.main-box5{
+  position: relative;
+  height: calc(100vh - #{rpx(100)});
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.main-box6{
+  position: relative;
+  height: calc(100vh - #{rpx(108)});
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.empty-box{
+  position: absolute;
+  @include wh(100%,100%);
+  z-index: 1;
+  background: #F7F7F7;
+  .empty-image{
+    display: block;
+    @include wh(rpx(480),rpx(480));
+    margin: rpx(232) auto 0;
+  }
+  .empty-word{
+    margin-top: rpx(10);
+    @include sc(rpx(32),#888);
+    text-align: center;
+  }
+}
+
+.settlement-box{
+  display: flex;
+  align-items: center;
+  height: rpx(108);
+  background: #fff;
+  .check-box{
+    position: relative;
+    @include wh(rpx(40),rpx(40));
+    border: 1px solid #979797;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: rpx(30);
+    image{
+      @include center;
+      @include wh(0,0);
+    }
+    &.active{
+      border: 0 none;
+      image{
+        @include wh(100%,100%);
+      }
+    }
+  }
+  .all-check{
+    @include sc(rpx(28),#888);
+    margin-left: rpx(10);
+  }
+  .all-price{
+    @include sc(rpx(36),#1F1F1F);
+    margin-left: rpx(30);
+    font-weight: 700;
+  }
+  .go-settlement{
+    @include wh(rpx(200),rpx(78));
+    line-height: rpx(78);
+    @include sc(rpx(32),#fff);
+    text-align: center;
+    background: #E62D2D;
+    margin-left: auto;
+    margin-right: rpx(30);
+    background: linear-gradient(to right,#FF7C73,#F74F4F);
+    border-radius: rpx(39);
+  }
+}
+
+.right-triangle{
+  @include wh(rpx(48),rpx(48));
+  margin-right: rpx(30);
+}
+
+.new-address {
+  margin-top: rpx(20);
+  background: #fff;
+  .form-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F5F5F5;
+    margin-left: rpx(30);
+    height: rpx(110);
+    .item-name {
+      width: rpx(184);
+      @include sc(rpx(32),#888);
+    }
+    .item-value {
+      @include sc(rpx(32),#353535);
+    }
+    .right-triangle {
+      margin-left: auto;
+    }
+    .item-input {
+      width: calc(100% - #{rpx(194)});
+      @include sc(rpx(32),#353535);
+      line-height: rpx(34);
+      &::placeholder {
+        @include sc(rpx(32),#ccc);
+      }
+    }
+    &:last-child {
+      border-bottom: 0 none;
+    }
+  }
+}
+
+.address-button-box {
+  margin-top: rpx(40);
+  .address-button {
+    flex: 1;
+    line-height: rpx(88);
+    margin: 0 rpx(30) rpx(30);
+    border-radius: rpx(44);
+    background: linear-gradient(90deg,rgba(255,124,115,1) 0%,rgba(247,79,79,1) 100%);
+    @include sc(rpx(36),#fff);
+    text-align: center;
+  }
+  .red-button {
+    color: #EA2F2F;
+    background: transparent;
+    border: rpx(2) solid #EA2F2F;
+  }
+}
+
+.privilege-failed {
+  @include center;
+  @include wh(rpx(580),auto);
+  background: #fff;
+  border-radius: rpx(14);
+  .privilege-title {
+    margin: rpx(60) auto 0;
+    @include sc(rpx(36),#1F1F1F);
+    line-height: rpx(36);
+    text-align: center;
+    font-weight: 700;
+  }
+  .privilege-content {
+    width: rpx(485);
+    margin: rpx(40) auto 0;
+    @include sc(rpx(32),#888);
+    line-height: rpx(48);
+  }
+  .privilege-button-box {
+    margin-top: rpx(60);
+    border-top: 1px solid rgba(0,0,80,0.05);
+    display: flex;
+    .privilege-button {
+      flex: 1;
+      @include sc(rpx(36),#007AFF);
+      text-align: center;
+      line-height: rpx(87);
+      border: 0 none;
+      &:first-child {
+        border-right: 1px solid rgba(0,0,80,0.05);
+      }
+    }
+  }
+}
+
+.g-search-box { // 首页搜索框
+  display: block;
+  margin: rpx(30) rpx(30) 0;
+  height: rpx(80);
+  border-radius: rpx(45);
+  background: #F7F7F7;
+  .icon-search {
+    display: inline-block;
+    @include wh(rpx(42), rpx(42));
+    margin: 0 rpx(13) 0 rpx(43);
+    vertical-align: rpx(20);
+    font-size: 0;
+    border: 0 none;
+    image {
+      display: inline-block;
+      @include wh(100%, 100%);
+    }
+  }
+  .search-input {
+    display: inline-block;
+    width: calc(100% - #{rpx(42)} - #{rpx(13)} - #{rpx(43)});
+    height: rpx(80);
+    @include sc(32rpx, #353535);
+    line-height: rpx(80);
+    &::placeholder {
+      @include sc(32rpx, #ccc);
+    }
+  }
+}
+
+.white-arrow { // 白色向右箭头
+  position: relative;
+  @include wh(rpx(20),rpx(36));
+  &::before, &::after {
+    content: '';
+    @include cl;
+    @include wh(rpx(5), rpx(22));
+    border-radius: rpx(5);
+    background: #fff;
+  }
+  &::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.red-add-button { // 红色添加按钮
+  position: relative;
+  background: linear-gradient(to right,#FF7C73,#F74F4F);
+  @include wh(rpx(36),rpx(36));
+  border-radius: 50%;
+  &::before, &::after {
+    content: '';
+    @include center;
+    @include wh(rpx(21), rpx(5));
+    border-radius: rpx(5);
+    background: #fff;
+  }
+  &::after {
+    @include wh(rpx(5), rpx(21));
+  }
+}
+
+.red-add-button2 { // 红色添加按钮2
+  position: relative;
+  background: linear-gradient(to right,#FF7C73,#F74F4F);
+  @include wh(rpx(48),rpx(48));
+  border-radius: 50%;
+  &::before, &::after {
+    content: '';
+    @include center;
+    @include wh(rpx(28), rpx(6));
+    border-radius: rpx(6);
+    background: #fff;
+  }
+  &::after {
+    @include wh(rpx(6), rpx(28));
+  }
+}
+
+.good-label-box { // 渐变边框标签
+  display: flex;
+  margin: rpx(20) rpx(30) 0;
+  .good-label {
+    margin-right: rpx(10);
+    width: rpx(96);
+    border-radius: rpx(18);
+    background: linear-gradient(#fff,#fff), linear-gradient(to right,#FF695E,#F74F4F);
+    -webkit-background-clip: content-box, border-box;
+    -webkit-background-origin: content-box, border-box;
+    padding: rpx(3);
+    .label-word {
+      display: block;
+      background: linear-gradient(to right,#FF695E,#F74F4F);
+      line-height: rpx(32);
+      text-align: center;
+      font-size: rpx(24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &.c-bg-green {
+      background: linear-gradient(#fff,#fff), linear-gradient(to right,#87D88B,#58C884);
+      -webkit-background-clip: content-box, border-box;
+      -webkit-background-origin: content-box, border-box;
+      .label-word {
+        background: linear-gradient(to right,#87D88B,#58C884);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &.c-bg-yellow {
+      background: linear-gradient(#fff,#fff), linear-gradient(to right,#FFAC5F,#FE6A40);
+      -webkit-background-clip: content-box, border-box;
+      -webkit-background-origin: content-box, border-box;
+      .label-word {
+        background: linear-gradient(to right,#FFAC5F,#FE6A40);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
